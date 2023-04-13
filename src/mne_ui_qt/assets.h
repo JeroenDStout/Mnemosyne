@@ -1,12 +1,12 @@
 #pragma once
 
-#include <string>
+#include <filesystem>
 
 
 namespace mnemosyne::ui_qt::assets {
 
 	auto set_asset_paths() -> bool /* success */;
 
-	static std::string	sound_test_path;
+	extern std::filesystem::path sound_test_path;
 
 }

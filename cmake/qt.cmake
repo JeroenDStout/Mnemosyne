@@ -1,10 +1,15 @@
 message(STATUS "Setup Qt6")
 
+set(qt_components Widgets Multimedia)
+
 #
 # Packages
 #
 
-find_package(Qt6 REQUIRED COMPONENTS Widgets)
+foreach(qt_component ${qt_components})
+  message(STATUS " - ${qt_component}")
+  find_package(Qt6 REQUIRED COMPONENTS ${qt_component})
+endforeach()
 
 #
 # Source
@@ -33,6 +38,12 @@ function(configure_qt_target project_ref)
   set_target_properties(${project_ref} PROPERTIES AUTORRC ON)
   set_target_properties(${project_ref} PROPERTIES AUTOUIC ON)
   target_link_libraries(${project_ref} PRIVATE Qt6::Widgets)
+  target_link_libraries(${project_ref} PRIVATE Qt6::Multimedia)
+  
+  foreach(qt_component ${qt_components})
+    message(STATUS " - Link ${qt_component}")
+    target_link_libraries(${project_ref} PRIVATE Qt6::${qt_component})
+  endforeach()
   
   if(MSVC)
     message(STATUS " - Additional warnings are disabled for ${project_ref} to allow Qt compilation")

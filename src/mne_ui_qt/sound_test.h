@@ -4,7 +4,9 @@
 #include "mne_ui_qt/ui_version.h"
 #include "mne_ui_qt/ui_sound_test.h"
 
-#include <QtWidgets/QMainWindow>
+#include <QtWidgets/QDialog.h>
+#include <QtMultimedia/QMediaPlayer.h>
+#include <QtMultimedia/QAudioOutput.h>
 
 
 namespace mnemosyne::ui_qt {
@@ -23,6 +25,9 @@ namespace mnemosyne::ui_qt {
 
       private:
         Ui::sound_test  ui_sound_test;
+
+        QMediaPlayer    *media_player;
+        QAudioOutput    *audio_output;
     };
 
 }

@@ -7,6 +7,9 @@
 using namespace mnemosyne::ui_qt;
 
 
+std::filesystem::path assets::sound_test_path("");
+
+
 auto assets::set_asset_paths() -> bool {
 	// We try to find the /assets folder
 	// We will walk backwards from the working directory to find it;
@@ -37,13 +40,13 @@ auto assets::set_asset_paths() -> bool {
 	std::cout << "Assets located at " << asset_path << std::endl;
 
 	// Set sound test asset path
-	fs::path sound_test_fpath = asset_path;
-	sound_test_fpath /= "sound_test";
-	if (!fs::exists(sound_test_fpath)) {
+	assets::sound_test_path = asset_path;
+	assets::sound_test_path /= "sound_test";
+	if (!fs::exists(sound_test_path)) {
 		std::cout << "ERROR: Could not find sound test asset path" << std::endl;
 		return false;
 	}
-	sound_test_path = sound_test_fpath.string();
+	std::cout << "Sound test located at " << assets::sound_test_path << std::endl;
 
 	return true;
 }
