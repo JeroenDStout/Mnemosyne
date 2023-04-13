@@ -34,6 +34,7 @@ include(cmake/qt.cmake)
 # Subprojects
 #
 
+add_subdirectory(src/mne_ui_qt)
 add_subdirectory(src/version)
 
 message(STATUS "")
