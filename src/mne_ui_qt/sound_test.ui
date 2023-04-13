@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>sound_test</class>
+ <widget class="QDialog" name="sound_test">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>167</width>
+    <height>134</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Sound Test</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <widget class="QPushButton" name="test_ogg">
+     <property name="text">
+      <string>Test .ogg</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="test_wav">
+     <property name="text">
+      <string>Test .wav</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <spacer name="spacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="ok">
+       <property name="maximumSize">
+        <size>
+         <width>100</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>ok</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>ok</sender>
+   <signal>released()</signal>
+   <receiver>sound_test</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>132</x>
+     <y>123</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>263</x>
+     <y>93</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>test_ogg</sender>
+   <signal>released()</signal>
+   <receiver>sound_test</receiver>
+   <slot>uii_test_ogg()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>83</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>83</x>
+     <y>66</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>test_wav</sender>
+   <signal>released()</signal>
+   <receiver>sound_test</receiver>
+   <slot>uii_test_wav()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>83</x>
+     <y>50</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>83</x>
+     <y>66</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>uii_test_ogg()</slot>
+  <slot>uii_test_wav()</slot>
+ </slots>
+</ui>

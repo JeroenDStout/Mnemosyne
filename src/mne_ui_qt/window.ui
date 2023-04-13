@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>demo_window</class>
- <widget class="QMainWindow" name="demo_window">
+ <class>mne_window</class>
+ <widget class="QMainWindow" name="mne_window">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -33,7 +33,7 @@
      <x>0</x>
      <y>0</y>
      <width>777</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_about">
@@ -41,6 +41,8 @@
      <string>Help</string>
     </property>
     <addaction name="action_about"/>
+    <addaction name="separator"/>
+    <addaction name="action_sound_test"/>
    </widget>
    <addaction name="menu_about"/>
   </widget>
@@ -50,14 +52,35 @@
     <string>About</string>
    </property>
   </action>
+  <action name="action_sound_test">
+   <property name="text">
+    <string>Test Sound</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections>
   <connection>
    <sender>action_about</sender>
    <signal>triggered()</signal>
-   <receiver>demo_window</receiver>
+   <receiver>mne_window</receiver>
    <slot>uii_about()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>388</x>
+     <y>230</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_sound_test</sender>
+   <signal>triggered()</signal>
+   <receiver>mne_window</receiver>
+   <slot>uii_sound_test()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>-1</x>
@@ -72,5 +95,6 @@
  </connections>
  <slots>
   <slot>uii_about()</slot>
+  <slot>uii_sound_test()</slot>
  </slots>
 </ui>

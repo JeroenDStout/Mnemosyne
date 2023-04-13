@@ -1,21 +1,24 @@
 #include "mne_ui_qt/window.h"
+#include "mne_ui_qt/sound_test.h"
 #include "version/git_version.h"
 
 
 #include <iostream>
 
 
-using namespace gaos::qt_demo;
+using namespace mnemosyne::ui_qt;
 
 
-mne_qt_window::mne_qt_window()
+main_window::main_window()
 {
     ui_window.setupUi(this);
 }
 
 
-void mne_qt_window::uii_about()
+void main_window::uii_about()
 {
+    std::cout << "Displaying main window about" << std::endl;
+
     QDialog *about = new QDialog();
 
     ui_version.setupUi(about);
@@ -25,4 +28,15 @@ void mne_qt_window::uii_about()
 
     about->setWindowModality(Qt::WindowModality::ApplicationModal);
     about->show();
+}
+
+
+void main_window::uii_sound_test()
+{
+    std::cout << "Displaying main window sound test" << std::endl;
+
+    sound_test *sound_test = new ui_qt::sound_test();
+
+    sound_test->setWindowModality(Qt::WindowModality::ApplicationModal);
+    sound_test->show();
 }

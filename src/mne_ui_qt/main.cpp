@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
       << std::endl;
 
     QApplication a(argc, argv);
-    gaos::qt_demo::mne_qt_window w;
+    mnemosyne::ui_qt::main_window w;
     w.setWindowTitle(QString("Mnemosyne ") + gaos::version::get_git_essential_version());
     w.show();
     return a.exec();

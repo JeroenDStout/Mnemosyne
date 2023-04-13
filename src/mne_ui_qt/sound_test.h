@@ -10,20 +10,19 @@
 namespace mnemosyne::ui_qt {
 
     // Empty window
-    class main_window : public QMainWindow
+    class sound_test : public QDialog
     {
         Q_OBJECT
 
       public:
-        main_window();
+        sound_test();
         
       public slots:
-        void uii_about();
-        void uii_sound_test();
+        void uii_test_wav();
+        void uii_test_ogg();
 
       private:
-        Ui::mne_window  ui_window;
-        Ui::version     ui_version;
+        Ui::sound_test  ui_sound_test;
     };
 
 }
