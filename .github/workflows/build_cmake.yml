@@ -36,6 +36,7 @@ jobs:
         version: "6.4.0"
         target: 'desktop'
         install-deps: 'true'
+        modules: 'qtcharts qtmultimedia'
           
     - name: Configure CMake
       env:
