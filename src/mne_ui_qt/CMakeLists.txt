@@ -6,14 +6,19 @@ init_project(mnemosyne_ui_qt "Mnemosyne/Qt")
 # Sources
 setup_project_source(mnemosyne_ui_qt "core"
   main.cpp
+  assets.cpp
+  assets.h
 )
 setup_project_source(mnemosyne_ui_qt "window"
   window.cpp
   window.h
+  sound_test.cpp
+  sound_test.h
 )
 setup_project_source_qt_ui(mnemosyne_ui_qt "window"
   window.ui
   version.ui
+  sound_test.ui
 )
 
 # Target
