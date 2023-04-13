@@ -18,7 +18,9 @@ setup_project_source_qt_ui(mnemosyne_ui_qt "window"
 
 # Target
 configure_project_executable(mnemosyne_ui_qt)
+configure_project_console(mnemosyne_ui_qt)
 configure_cxx_target(mnemosyne_ui_qt)
 configure_qt_target(mnemosyne_ui_qt)
 	
 add_dependencies(mnemosyne_ui_qt version)
+configure_asset_folder(mnemosyne_ui_qt mnemosyne_ui_qt_assets ${project_asset_dir}/sound_test assets/sound_test)

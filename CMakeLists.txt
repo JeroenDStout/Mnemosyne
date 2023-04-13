@@ -1,8 +1,10 @@
 #
-# Initial set-up
+#       * * * * * * * * * *
+#      * * * Mnemosyne * * *
+#       * * * * * * * * * *
 #
 
-cmake_minimum_required(VERSION 3.15)
+cmake_minimum_required(VERSION 3.15) 
 
 project(Mnemosyne)
 include(cmake/project.cmake)
@@ -18,23 +20,9 @@ include(cmake/artefacts.cmake)
 include(cmake/sources.cmake)
 include(cmake/qt.cmake)
 
-#
-# Base config
-#
+# Assets
+include(cmake/assets.cmake)
 
- # intentionally left blank
-
-#
-# Paths
-#
-
- # intentionally left blank
-
-#
 # Subprojects
-#
-
 add_subdirectory(src/mne_ui_qt)
 add_subdirectory(src/version)
-
-message(STATUS "")

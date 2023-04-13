@@ -1,4 +1,5 @@
 set(project_root_dir ${PROJECT_SOURCE_DIR})
+set(project_asset_dir ${project_root_dir}/assets)
 
 
 macro(init_directory name)
