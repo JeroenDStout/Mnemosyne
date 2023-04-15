@@ -30,5 +30,6 @@ function(configure_asset_folder project_ref asset_group_name folder_in folder_ou
   add_custom_target(${asset_group_name} ALL
      DEPENDS ${added_assets}
   )
+  set_target_properties(${asset_group_name} PROPERTIES FOLDER "assets")
   
 endfunction()
