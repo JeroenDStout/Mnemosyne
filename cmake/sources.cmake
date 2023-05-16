@@ -12,6 +12,7 @@ macro(init_directory name)
   file(RELATIVE_PATH rel_gen ${project_root_dir} ${abs_gen})
   message(STATUS "Source    : ./${rel_src}")
   message(STATUS "Generated : ./${rel_gen}")
+  file(RELATIVE_PATH rel_assets ${abs_src} ${project_asset_dir})
 endmacro()
 
 

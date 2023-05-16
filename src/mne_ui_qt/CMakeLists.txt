@@ -20,6 +20,9 @@ setup_project_source_qt_ui(mnemosyne_ui_qt "window"
   version.ui
   sound_test.ui
 )
+setup_project_source(mnemosyne_ui_qt "assets"
+  ${rel_assets}/app_resource/resource.rc
+)
 
 # Target
 configure_project_executable(mnemosyne_ui_qt)
